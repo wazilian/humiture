@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="app.css">
+		<script src="settings.js"></script>
+		<script src="wifi.js"></script>
+		<script src="ota.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<span class="nav_bar">
+			<img src="favicon.ico" class="icon">
+			<span class="nav_link_text">
+				<a href="https://github.com/wazilian/humiture" target="_blank">
+					Humiture
+				</a>
+			</span>
+			<span class="nav_link_text"><a href="index.html">Status</a></span>
+			<span class="nav_text">Settings</span>
+		</span>
+
+		<div class="container_msb_box_main">
+			<img src="" id="icon_main" class="icon">
+			<p id="msg_box_main" class="msg_box_main"></p>
+		</div>
+
+		<div class="row">
+			<div class="container">
+				<div class="container_header">System Settings</div>
+				<div class="container_row">
+					<span class="label">System Name:</span>
+					<input id="system_name" type="text" maxlength="31" />
+				</div>
+				<div class="container_row">
+				</div>
+				<div class="container_row">
+					<span class="label">Status LED:</span>
+					<input type="checkbox" id="use_led">
+				</div>
+				<div class="container_row">
+					<input type="button" value="Update Settings" id="button_update_settings" />
+					<img src="" id="icon_settings" class="icon">
+					<p id="msg_box_settings" class="msg_box"></p>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="container_header">Wi-Fi Network</div>
+				<div class="container_row">
+					<span class="label">Network:</span>
+					<input type="text" maxlength="31" placeholder="Network" id="ssid" />
+				</div>
+				<div class="container_row">
+					<span class="label">Password:</span>
+					<input type="password" autocomplete="on" maxlength="63" placeholder="Password" id="password" />
+				</div>
+				<div class="container_row">
+					<span class="label"></span>
+					<input type="checkbox" id="show_password"> Show Password
+				</div>
+				<div class="container_row">
+					<input type="button" value="Connect to Wi-Fi" id="button_network" />
+					<img src="" id="icon_network" class="icon">
+					<p id="msg_box_network" class="msg_box"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="container">
+				<div class="container_header">Update System Firmware</div>
+				<div class="container_row">
+					<input type="file" accept=".bin" id="bin_file" />
+					<input type="button" value="Select File" id="button_bin_file" />
+				</div>
+				<div class="container_row">
+					<span class="label">File:</span>
+					<div class="container_text tooltip_bin_file">
+						<span id="bin_filename" class="span_bin_filename"></span>
+						<span class="tooltip_box_bin_file" id="tooltip_bin_file"></span>
+					</div>
+				</div>
+				<div class="container_row">
+					<span class="label">Size:</span>
+					<div class="container_text">
+						<span id="bin_file_size"></span>
+					</div>
+				</div>
+				<div class="container_row">
+					<input type="button" value="Update Firmware" id="button_update_firmware" />
+					<img src="" id="icon_fw" class="icon">
+					<p id="msg_box_fw" class="msg_box"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="preload_images_container">
+			<img src="error.ico" alt="" />
+			<img src="info.ico" alt="" />
+			<img src="success.ico" alt="" />
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,390 @@
+
+:root {
+	--primary_bg_color:		#131416;
+	--primary_text_color:	#dee0e3;
+	--table_border_color:	#34383d;
+	--textbox_bg_color:		#212326;
+	--button_color:			#42474d;
+
+	--red:					#cc3135;
+	--orange:				#e79813;
+	--yellow:				#fbe106;
+	--green:				#37be60;
+	--blue:					#4797ff;
+	--white:				#ffffff;
+}
+
+* {
+	font-family: Calibri, sans-serif;
+}
+
+html, body {
+	background-color: var(--primary_bg_color);
+	color: var(--primary_text_color);
+	scrollbar-gutter: stable;
+}
+
+.red {
+	color: var(--red);
+}
+
+.orange {
+	color: var(--orange);
+}
+
+.green {
+	color: var(--green);
+}
+
+.blue {
+	color: var(--blue);
+}
+
+.white {
+	color: var(--white);
+}
+
+.bg_green {
+	background-color: var(--green);
+}
+
+.bg_orange {
+	background-color: var(--orange);
+}
+
+.bg_red {
+	background-color: var(--red);
+}
+
+.icon {
+	vertical-align: middle;
+	margin: 0px 5px 0px 5px;
+}
+
+/* container used to preload images without browser warnings */
+.preload_images_container {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -9999;
+}
+
+.nav_bar {
+	display: block;
+	text-align: center;
+	margin: 10px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.nav_link_text {
+	display: inline;
+	vertical-align: middle;
+	margin: 0px 40px 0px 0px;
+}
+
+.nav_text {
+	display: inline;
+	vertical-align: middle;
+	color: var(--blue);
+	border-bottom: 3px solid var(--blue);
+	padding-bottom: 3px;
+	margin: 0px 40px 0px 0px;
+}
+
+a {
+	color: var(--blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--blue);
+}
+
+.container_msb_box_main {
+	text-align: center;
+	line-height: 0px;
+	margin: 10px;
+}
+
+.msg_box_main {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.container_table {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;		/* Allow tables to stack on small screens */
+}
+
+.main_table {
+	width: fit-content;
+	font-size: 15px;
+	border: 1px solid var(--table_border_color);
+	border-radius: 8px;
+	padding: 10px;
+}
+
+td {
+	width: 155px;
+	padding: 10px;
+}
+
+.td_label {
+	text-align: right;
+	color: var(--blue);
+	white-space: nowrap;
+}
+
+.color_chart {
+	width: fit-content;
+	border: 1px solid var(--table_border_color);
+	border-radius: 8px;
+	text-align: left;
+	white-space: nowrap;
+	visibility: hidden;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 55px;
+	background-color: var(--primary_bg_color);
+	opacity: 1;
+}
+
+.color_chart_tooltip {
+	position: relative;
+}
+
+.color_chart_tooltip:hover .color_chart {
+	visibility: visible;
+}
+
+.color_box {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: bottom;
+	border: none;
+	padding: 0px;
+	margin: 0px 5px 0px 0px;
+}
+
+.label {
+	display: inline-block;
+	width: 96px;
+	color: var(--blue);
+	vertical-align: middle;
+	text-align: right;
+	margin: 0px 10px 0px 0px;
+}
+
+input[type=text], input[type=password] {
+	display: inline-block;
+	width: 236px;
+	height: 16px;
+    font-size: inherit;
+	background-color: var(--button_color);
+	color: var(--primary_text_color);
+	border: none;
+	border-radius: 8px;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus {
+	outline: 1px solid var(--blue);
+	border: none;
+}
+
+input[type=text]:disabled {
+	cursor: not-allowed;       /* Changes mouse cursor to red circle and slash */
+	opacity: 0.6;              /* Fades colors */
+}
+
+input[type=checkbox] {
+	appearance: none;
+	width: 18px;
+	height: 18px;
+	background-color: var(--button_color);
+	border-radius: 4px;
+	accent-color: var(--blue);
+	vertical-align: middle;
+	margin: 0px 5px 0px 0px;
+}
+
+input[type="checkbox"]:checked {
+	appearance: auto;
+}
+
+input[type=button] {
+	width: 125px;
+	height: 36px;
+	line-height: 1px;
+    font-size: inherit;
+	background-color: var(--textbox_bg_color);
+	color: var(--primary_text_color);
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+input[type=button]:active {
+	outline: 1px solid var(--blue);
+}
+
+input[type=button]:disabled {
+	cursor: not-allowed;       /* Changes mouse cursor to red circle and slash */
+	opacity: 0.6;              /* Fades colors */
+}
+
+input[type=file] {
+	display: none;
+}
+
+/* select,::picker(select) {
+	appearance: base-select;
+}
+
+select {
+	display: inline-block;
+	vertical-align: middle;
+	width: 256px;
+	height: 36px;
+	line-height: 15px;
+    font-size: inherit;
+	background-color: var(--button_color);
+	color: var(--primary_text_color);
+	accent-color: var(--blue);
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	margin: 0px;
+}
+
+select::picker-icon {
+	margin: -14px 0px 0px 0px;
+	text-align: right;
+}
+
+select::picker(select) {
+	background-color: var(--button_color);
+	color: var(--primary_text_color);
+	outline: 1px solid var(--blue);
+	border: none;
+	border-radius: 8px;
+}
+
+option {
+	padding: 5px 0px 5px 10px;
+	outline: none;
+	border: none;
+}
+
+option::checkmark {
+	display: none;
+} */
+
+.row {
+	display: flex;
+	width: 835px;
+	margin: auto auto 20px auto;
+	gap: 20px;
+}
+
+.container {
+	flex: 1;
+	display: block;
+	font-size: 15px;
+	border: 1px solid var(--table_border_color);
+	border-radius: 8px;
+	margin: auto;
+	padding: 20px 20px 0px 20px;
+}
+
+.container_header {
+	font-size: 20px;
+	line-height: 15px;
+	color: var(--blue);
+	white-space: nowrap;
+	margin: 0px;
+	height: 56px;
+}
+
+.container_row {
+	margin: 0px;
+	height: 56px;
+}
+
+.container_text {
+	display: inline-block;
+	vertical-align: middle;
+	width: 254px;         /* Sets the shown length of bin filename before ellipsis */
+	height: 36px;
+	line-height: 36px;
+}
+
+.tooltip_bin_file {
+	position: relative;
+}
+
+.span_bin_filename {
+	display: block;
+	color: var(--primary_text_color);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tooltip_box_bin_file {
+	visibility: hidden;
+	width: auto;
+	background-color: var(--blue);
+	color: var(--primary_text_color);
+	text-align: center;
+	border-radius: 8px;
+	padding: 10px;
+	white-space: nowrap;
+
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: -10px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip_bin_file:hover .tooltip_box_bin_file {
+	visibility: visible;
+	opacity: 1;
+}
+
+#bin_file_size {
+	color: var(--primary_text_color);
+}
+
+.msg_box {
+	display: inline-block;
+	vertical-align: middle;
+	word-wrap: break-word;
+	width: 198px;
+	line-height: 15px;
+	margin: 0px;
+}
+
+.loading:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	animation: ellipsis steps(4, end) 4s infinite;
+	content: "\2026";		/* Ellipsis (...) ASCII code */
+	width: 0px;
+}
+
+@keyframes ellipsis {
+	from { width: 0px; }
+	to { width: 12px; }
+}

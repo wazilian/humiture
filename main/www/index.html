@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="app.css">
+		<script src="status.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<span class="nav_bar">
+			<img src="favicon.ico" class="icon">
+			<span class="nav_link_text">
+				<a href="https://github.com/wazilian/humiture" target="_blank">
+					Humiture
+				</a>
+			</span>
+			<span class="nav_text">Status</span>
+			<span class="nav_link_text"><a href="settings.html">Settings</a></span>
+		</span>
+
+		<div class="container_msb_box_main">
+			<img src="" id="icon_main" class="icon">
+			<p id="msg_box_main" class="msg_box_main"></p>
+		</div>
+
+		<div class="container_table">
+			<table class="main_table">
+				<tr>
+					<td class="td_label">Name:</td>
+					<td id="system_name"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Firmware Version:</td>
+					<td id="fw_version"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Wi-Fi Network:</td>
+					<td id="ssid"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Wi-Fi Signal Strength:</td>
+					<td>
+						<span class="color_chart_tooltip">
+							<span id="rssi"></span>
+							<table class="color_chart">
+								<tr>
+									<td class="blue">RSSI Color Chart</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="color_box bg_green"></div>
+										<span id="cc_text_green"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="color_box bg_orange"></div>
+										<span id="cc_text_orange"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="color_box bg_red"></div>
+										<span id="cc_text_red"></span>
+									</td>
+								</tr>
+							</table>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_label">IP Address:</td>
+					<td id="ip_address"></td>
+				</tr>
+				<tr>
+					<td class="td_label">MAC Address:</td>
+					<td id="mac_address"></td>
+				</tr>
+				<tr>
+					<td class="td_label"></td>
+					<td></td>
+				</tr>
+			</table>
+
+			<table class="main_table">
+				<tr>
+					<td class="td_label">Boot Date:</td>
+					<td id="boot_date"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Boot Time:</td>
+					<td id="boot_time"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Uptime:</td>
+					<td id="uptime"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Date:</td>
+					<td id="date"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Time:</td>
+					<td id="time"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Temperature:</td>
+					<td class="green" id="temperature"></td>
+				</tr>
+				<tr>
+					<td class="td_label">Humidity:</td>
+					<td class="green" id="humidity"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="preload_images_container">
+			<img src="error.ico" alt="" />
+		</div>
+
+	</body>
+</html>
